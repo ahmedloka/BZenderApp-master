@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+
+    <dimen name="txt_size">36sp</dimen>
+
+    <dimen name="lang_txt_size">32sp</dimen>
+
+    <dimen name="forgot_txt_size">18sp</dimen>
+
+    <dimen name="margin">64dp</dimen>
+
+
+    <dimen name="margint">16dp</dimen>
+
+    <dimen name="grid_txt_size">28sp</dimen>
+
+    <dimen name="constraint_margin">32dp</dimen>
+
+    <dimen name="margin_txt">6dp</dimen>
+
+    <dimen name="button_height_size">60dp</dimen>
+
+    <dimen name="margin_txt_bottom_size">70dp</dimen>
+
+    <dimen name="height_of_descripition_txt">300dp</dimen>
+
+    <dimen name="height_button">60dp</dimen>
+
+    <dimen name="arrow_icon_size">24dp</dimen>
+
+    <dimen name="view_height">4dp</dimen>
+
+    <dimen name="tab_text_size">24sp</dimen>
+
+    <dimen name="icon_size">25dp</dimen>
+
+    <dimen name="pin_height">78dp</dimen>
+    <dimen name="pin_width">64dp</dimen>
+    <dimen name="safe_margin">39dp</dimen>
+    <dimen name="half_safe_margin">19.5dp</dimen>
+
+    <dimen name="most_ordered_item_height">311.5dp</dimen>
+    <dimen name="category_recycler_item_height">212dp</dimen>
+    <dimen name="item_restaurant_height">183dp</dimen>
+    <dimen name="restaurant_card_height">256dp</dimen>
+    <dimen name="_10_height">18dp</dimen>
+    <dimen name="_15_height">27.5dp</dimen>
+    <dimen name="_30_height">55.5dp</dimen>
+    <dimen name="_45_height">82dp</dimen>
+    <dimen name="_53_height">96.5dp</dimen>
+    <dimen name="_84_height">84dp</dimen>
+    <dimen name="_20_height">36.21dp</dimen>
+    <dimen name="_1dp_height">1.83dp</dimen>
+    <dimen name="_88_dp_height">160.5dp</dimen>
+
+
+</resources>

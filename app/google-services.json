@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "319444397929",
+    "firebase_url": "https://bzender-81849.firebaseio.com",
+    "project_id": "bzender-81849",
+    "storage_bucket": "bzender-81849.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319444397929:android:3ddb4f606159d381",
+        "android_client_info": {
+          "package_name": "apps.sharabash.bzender"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "319444397929-pl9ihr0ukv9t20co3i6agbefcv93c6up.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "apps.sharabash.bzender",
+            "certificate_hash": "37409bd428dadd0d8ca5647c5fb876769ff8c9e3"
+          }
+        },
+        {
+          "client_id": "319444397929-85rs8n7rf8atkg3dqckggk2r2r4tnhq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCESExYibR3tgphprneED39eBE_IKWTGak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "319444397929-85rs8n7rf8atkg3dqckggk2r2r4tnhq5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

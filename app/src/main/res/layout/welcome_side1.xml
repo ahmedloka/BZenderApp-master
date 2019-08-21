@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="#152e53"
+    android:orientation="vertical"
+    >
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_53_height" />
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="411"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/img"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/most_ordered_item_height"
+            android:layout_weight="180"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/slide_1"
+            />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_88_dp_height" />
+    <apps.sharabash.bzender.Utills.MyTextViewBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_one_first_txt"
+        android:textSize="@dimen/_18ssp"
+        android:textColor="@color/whitecolor"
+        android:layout_gravity="center"
+        android:padding="@dimen/margin_txt"
+        android:gravity="center"
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_53_height" />
+
+
+
+    <apps.sharabash.bzender.Utills.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_one_second_txt"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/whitecolor"
+        android:layout_gravity="center"
+        android:padding="@dimen/margin_txt"
+        android:gravity="center"
+        />
+</android.support.v7.widget.LinearLayoutCompat>

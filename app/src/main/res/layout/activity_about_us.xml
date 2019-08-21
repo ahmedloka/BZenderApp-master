@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.AboutUs">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingTop="@dimen/_20_height"
+        android:paddingBottom="@dimen/_20_height"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:ignore="UnusedAttribute">
+
+        <LinearLayout
+            android:id="@+id/title_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="411">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imageNavigationIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="25"
+                android:scaleType="centerInside"
+                android:src="@drawable/reply" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="22" />
+
+            <apps.sharabash.bzender.Utills.MyTextViewBold
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="344"
+                android:text="@string/about_us"
+                android:textColor="@color/whitecolor"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45_height" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="411">
+
+                <apps.sharabash.bzender.Utills.MyTextViewBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="165"
+                    android:background="@color/tab_background"
+                    android:gravity="center"
+                    android:padding="@dimen/_4_height"
+                    android:text="@string/about_us"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="@dimen/_14ssp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10_height" />
+
+            <apps.sharabash.bzender.Utills.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/_10_height"
+                android:textColor="@color/blakcolor"
+                android:text="Company established in late 2017 to serve medical market first but now we launch in all markets in Egypt
+It's the first network of it's kind in the world and first in the Middle East at submit Tenders electronically"
+                android:textSize="@dimen/_12ssp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10_height" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="411">
+
+                <apps.sharabash.bzender.Utills.MyTextViewBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="165"
+                    android:background="@color/tab_background"
+                    android:gravity="center"
+                    android:padding="@dimen/_4_height"
+                    android:text="@string/vision"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="@dimen/_14ssp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10_height" />
+
+            <apps.sharabash.bzender.Utills.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/_10_height"
+                android:text="To be the most transformative leadership in B2B E-commercial field
+that monitoring all trading movement and be a compass of economy in some day
+"
+                android:textColor="@color/blakcolor"
+                android:textSize="@dimen/_12ssp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10_height" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="411">
+
+                <apps.sharabash.bzender.Utills.MyTextViewBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="165"
+                    android:background="@color/tab_background"
+                    android:gravity="center"
+                    android:padding="@dimen/_4_height"
+                    android:text="@string/mission"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="@dimen/_14ssp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10_height" />
+
+            <apps.sharabash.bzender.Utills.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/_10_height"
+                android:text="Supporting small businesses, and making healthy competition between each other
+"
+                android:textColor="@color/blakcolor"
+                android:textSize="@dimen/_12ssp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10_height" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="411">
+
+                <apps.sharabash.bzender.Utills.MyTextViewBold
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="165"
+                    android:background="@color/tab_background"
+                    android:gravity="center"
+                    android:padding="@dimen/_4_height"
+                    android:text="@string/objective"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="@dimen/_14ssp" />
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_10_height" />
+
+            <apps.sharabash.bzender.Utills.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/_10_height"
+                android:text="THE MIDDLE EAST FIRST CONTRACTING and SUPPLYING E-TENDERING SERVICES"
+                android:textColor="@color/blakcolor"
+                android:textSize="@dimen/_12ssp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30_height" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+    </ScrollView>
+
+
+</android.support.v7.widget.LinearLayoutCompat>

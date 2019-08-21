@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ContactUs">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back_contact" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="@color/blakcolor" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="@dimen/safe_margin"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/loc_white" />
+
+                <Space
+                    android:layout_width="@dimen/half_safe_margin"
+                    android:layout_height="wrap_content" />
+
+                <apps.sharabash.bzender.Utills.MyTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/address_"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="@dimen/_10_height"
+                    android:layout_height="wrap_content" />
+
+
+                <apps.sharabash.bzender.Utills.MyTextViewBold
+                    android:id="@+id/txt_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="@dimen/safe_margin"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/phone_num" />
+
+                <Space
+                    android:layout_width="@dimen/half_safe_margin"
+                    android:layout_height="wrap_content" />
+
+                <apps.sharabash.bzender.Utills.MyTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/phone_number"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="wrap_content" />
+
+
+                <apps.sharabash.bzender.Utills.MyTextViewBold
+                    android:id="@+id/txt_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="@dimen/safe_margin"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/email" />
+
+                <Space
+                    android:layout_width="@dimen/half_safe_margin"
+                    android:layout_height="wrap_content" />
+
+                <apps.sharabash.bzender.Utills.MyTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/email_address"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="@dimen/_10_height"
+                    android:layout_height="wrap_content" />
+
+
+                <apps.sharabash.bzender.Utills.MyTextViewBold
+                    android:id="@+id/txt_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="@dimen/pin_width"
+                    android:layout_height="wrap_content" />
+
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/fb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/face_social" />
+
+                <Space
+                    android:layout_width="@dimen/pin_width"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/what_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/whats_social" />
+
+                <Space
+                    android:layout_width="@dimen/pin_width"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/twitter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/twitter_social" />
+
+                <Space
+                    android:layout_width="@dimen/pin_width"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/instgram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/insta_img" />
+
+                <Space
+                    android:layout_width="@dimen/pin_width"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30_height" />
+
+
+            <apps.sharabash.bzender.Utills.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_30_height"
+                android:layout_marginEnd="@dimen/_30_height"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:drawablePadding="@dimen/margin_txt"
+                android:padding="@dimen/margin_txt"
+                android:text="@string/message"
+                android:textColor="@color/whitecolor"
+                android:textSize="@dimen/grid_txt_size" />
+
+            <apps.sharabash.bzender.Utills.MyEditText
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_of_descripition_txt"
+                android:layout_marginStart="@dimen/_30_height"
+                android:layout_marginEnd="@dimen/_30_height"
+                android:background="#E0E1E3"
+                android:gravity="start"
+                android:inputType="text"
+                android:padding="@dimen/_10_height" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30_height" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="411">
+
+                <apps.sharabash.bzender.Utills.ButtonBold
+                    android:id="@+id/send"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_button"
+                    android:layout_gravity="center"
+                    android:layout_weight="160"
+                    android:background="@color/blakcolor"
+                    android:gravity="center"
+                    android:text="@string/send"
+                    android:textAllCaps="false"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="@dimen/grid_txt_size" />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_45_height" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingTop="@dimen/_20_height"
+        android:paddingBottom="@dimen/_20_height"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:ignore="UnusedAttribute">
+
+        <LinearLayout
+            android:id="@+id/title_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="411">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imageNavigationIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="25"
+                android:scaleType="centerInside"
+                android:src="@drawable/reply" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="22" />
+
+            <apps.sharabash.bzender.Utills.MyTextViewBold
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="344"
+                android:text="@string/contact_us"
+                android:textColor="@color/whitecolor"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+</FrameLayout>

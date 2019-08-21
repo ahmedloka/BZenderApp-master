@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
+    tools:openDrawer="start">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingTop="@dimen/_20_height"
+        android:paddingBottom="@dimen/_20_height"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:ignore="UnusedAttribute">
+
+        <LinearLayout
+            android:id="@+id/title_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="411">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/imageNavigationIcon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="25"
+                android:scaleType="centerInside"
+                android:src="@drawable/reply" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="22" />
+
+            <apps.sharabash.bzender.Utills.MyTextViewBold
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="344"
+                android:text="@string/tender_details"
+                android:textColor="@color/whitecolor"
+                android:textSize="@dimen/_14ssp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <apps.sharabash.bzender.Utills.MyTextViewBold
+                android:id="@+id/tender_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:textColor="@color/color_hard_dark_blue"
+                android:textSize="@dimen/_25ssp" />
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20_height" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/half_safe_margin"
+                    android:layout_marginEnd="@dimen/half_safe_margin"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:layout_width="@dimen/arrow_icon_size"
+                                    android:layout_height="@dimen/arrow_icon_size"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/date" />
+
+                                <apps.sharabash.bzender.Utills.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="344"
+                                    android:paddingStart="@dimen/_4_height"
+                                    android:paddingEnd="@dimen/_4_height"
+                                    android:text="@string/start_date"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/_8ssp"
+                                    android:textStyle="bold" />
+
+                                <apps.sharabash.bzender.Utills.MyTextView
+                                    android:id="@+id/startDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="344"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/_8ssp"
+                                    android:textStyle="bold" />
+                            </android.support.v7.widget.LinearLayoutCompat>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:background="@color/color_hard_dark_blue" />
+                        </android.support.v7.widget.LinearLayoutCompat>
+
+                        <Space
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_10_height" />
+
+                        <android.support.v7.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+
+                                <android.support.v7.widget.AppCompatImageView
+                                    android:layout_width="@dimen/arrow_icon_size"
+                                    android:layout_height="@dimen/arrow_icon_size"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/date" />
+
+                                <apps.sharabash.bzender.Utills.MyTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="344"
+                                    android:paddingStart="@dimen/_4_height"
+                                    android:paddingEnd="@dimen/_4_height"
+                                    android:text="@string/end_date"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/_8ssp"
+                                    android:textStyle="bold" />
+
+                                <apps.sharabash.bzender.Utills.MyTextView
+                                    android:id="@+id/endDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="344"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/_8ssp"
+                                    android:textStyle="bold" />
+                            </android.support.v7.widget.LinearLayoutCompat>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginTop="@dimen/_1sdp"
+                                android:background="@color/color_hard_dark_blue" />
+
+                        </android.support.v7.widget.LinearLayoutCompat>
+
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <apps.sharabash.bzender.Utills.ButtonBook
+                            android:id="@+id/download_file"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/height_button"
+                            android:layout_gravity="center"
+                            android:background="@color/blakcolor"
+                            android:drawablePadding="@dimen/half_safe_margin"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/half_safe_margin"
+                            android:paddingEnd="@dimen/half_safe_margin"
+                            android:text="@string/view_tender_details"
+                            android:textColor="@color/whitecolor"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="bold" />
+
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20_height" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45_height"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/half_safe_margin"
+                    android:layout_marginEnd="@dimen/half_safe_margin"
+                    android:background="@color/whitecolor"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="@dimen/safe_margin"
+                        android:layout_height="wrap_content" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="@dimen/safe_margin"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/loc" />
+
+                    <Space
+                        android:layout_width="@dimen/half_safe_margin"
+                        android:layout_height="wrap_content" />
+
+                    <apps.sharabash.bzender.Utills.MyTextView
+                        android:id="@+id/location_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="344"
+                        android:text=""
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_10_height" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45_height"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/half_safe_margin"
+                    android:layout_marginEnd="@dimen/half_safe_margin"
+                    android:background="@color/whitecolor"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Space
+                        android:layout_width="@dimen/safe_margin"
+                        android:layout_height="wrap_content" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="@dimen/safe_margin"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/category" />
+
+                    <Space
+                        android:layout_width="@dimen/half_safe_margin"
+                        android:layout_height="wrap_content" />
+
+                    <apps.sharabash.bzender.Utills.MyTextView
+                        android:id="@+id/category_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="344"
+                        android:text=""
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+                </android.support.v7.widget.LinearLayoutCompat>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_10_height"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45_height"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/half_safe_margin"
+                    android:layout_marginEnd="@dimen/half_safe_margin"
+                    android:background="@color/whitecolor"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Space
+                        android:layout_width="@dimen/safe_margin"
+                        android:layout_height="wrap_content" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="@dimen/safe_margin"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/car_type" />
+
+                    <Space
+                        android:layout_width="@dimen/half_safe_margin"
+                        android:layout_height="wrap_content" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_10_height" />
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/restaurant_card_height"
+                    android:layout_marginStart="@dimen/half_safe_margin"
+                    android:layout_marginEnd="@dimen/half_safe_margin"
+                    android:background="@color/whitecolor"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/half_safe_margin"
+
+                    >
+
+                    <Space
+                        android:layout_width="@dimen/safe_margin"
+                        android:layout_height="wrap_content" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="@dimen/safe_margin"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/desc" />
+
+                    <Space
+                        android:layout_width="@dimen/half_safe_margin"
+                        android:layout_height="wrap_content" />
+
+                    <apps.sharabash.bzender.Utills.MyTextView
+                        android:id="@+id/desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="344"
+                        android:text=""
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30_height" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30_height" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+    </ScrollView>
+</LinearLayout>

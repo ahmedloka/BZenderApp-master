@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:padding="@dimen/margint">
+
+    <!--<View
+        android:id="@+id/avatar"
+        android:layout_alignParentLeft="true"
+        android:scaleType="centerInside"
+        android:background="@drawable/circle"
+        android:layout_width="34dp"
+        android:layout_height="34dp" />-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/_53_height"
+        android:layout_height="@dimen/_53_height"
+        android:layout_gravity="center" />
+
+    <apps.sharabash.bzender.Utills.MyTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/avatar"
+        android:layout_marginStart="@dimen/margint"
+        android:layout_toEndOf="@+id/avatar"
+        android:paddingBottom="@dimen/margin_txt"
+        android:text="" />
+
+    <apps.sharabash.bzender.Utills.MyTextView
+        android:id="@+id/message_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_alignStart="@+id/name"
+        android:background="@drawable/their_message"
+        android:padding="@dimen/margint" />
+</RelativeLayout>

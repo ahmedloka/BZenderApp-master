@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="apps.sharabash.bzender">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <dist:module dist:instant="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.example.maptest.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activities.myTender.MyTendersActivity"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity
+            android:name=".activities.TermsAndConditionActivity"
+            android:parentActivityName=".activities.Setting" />
+        <activity
+            android:name=".activities.imagesBook.ImagesActivity"
+            android:parentActivityName=".activities.TenderDetails.TinderDetails" />
+        <activity
+            android:name=".activities.BookActivity"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity
+            android:name=".activities.TenderCarDetails"
+            android:parentActivityName=".activities.TenderDetails.TinderDetails" />
+        <activity
+            android:name=".activities.TenderElectricalDetails"
+            android:parentActivityName=".activities.TenderCarDetails" />
+        <activity
+            android:name=".activities.fillDataElectrical.FillDataElectricalActivity"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity
+            android:name=".activities.fillDataCar.FillDataCarActivity"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity
+            android:name=".activities.CompleteAddTiner"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity
+            android:name=".activities.webViewContactUs.WebViewActivity"
+            android:parentActivityName=".activities.ContactUs" />
+
+
+        <activity android:name=".activities.HowBookTender" />
+        <activity android:name=".activities.HowAddTender" />
+        <activity
+            android:name=".activities.ChooseHowItWork"
+            android:parentActivityName=".activities.Home.Home" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="5397ab207ad3000ea778a8bb9c620625dd57401b" />
+
+        <activity android:name=".activities.HowItWork" />
+        <activity
+            android:name=".activities.changePassword.ChangePassword"
+            android:parentActivityName=".activities.Setting" />
+        <activity
+            android:name=".activities.editProfile.EditProfile"
+            android:exported="true"
+            android:parentActivityName=".activities.profile.Profile" />
+        <activity
+            android:name=".activities.profile.Profile"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity
+            android:name=".activities.Setting"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity
+            android:name=".activities.ContactUs"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity
+            android:name=".activities.AboutUs"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity android:name=".activities.WelcomeActivity">
+
+
+        </activity>
+        <activity
+            android:name=".activities.chatRoom.ChatRoom"
+            android:parentActivityName=".activities.chatRoom.ChatRoom" />
+        <activity
+            android:name=".activities.notification.Notifications"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity
+            android:name=".activities.chatAllUsers.ChatListActivity"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity
+            android:name=".activities.myBooking.MyBooking"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity
+            android:name=".activities.TenderDetails.TinderDetails"
+            android:parentActivityName=".activities.Tenders.AllTenderActivity" />
+        <activity
+            android:name=".activities.Tenders.AllTenderActivity"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity
+            android:name=".activities.AddTender.AddTinder"
+            android:parentActivityName=".activities.Home.Home" />
+        <activity
+            android:name=".activities.verfication.VerificationActivity"
+            android:parentActivityName=".activities.login.Login" />
+        <activity
+            android:name=".activities.forget_password.ForgetPassword"
+            android:parentActivityName=".activities.login.Login" />
+        <activity android:name=".activities.HelloActivity" />
+        <activity
+            android:name=".activities.Home.Home"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activities.signUp.SignUp"
+            android:exported="true" />
+        <activity android:name=".activities.login.Login" />
+        <activity android:name=".activities.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo_white" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/dark_blue" />
+
+        <service android:name=".services.MyFireBaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".services.SignalRService"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService">
+        </service>
+
+        <receiver android:name=".Utills.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

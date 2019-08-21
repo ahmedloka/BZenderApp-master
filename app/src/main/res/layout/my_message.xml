@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/margint"
+    android:paddingTop="@dimen/margint"
+    android:paddingBottom="@dimen/margint"
+    android:paddingEnd="@dimen/safe_margin"
+    android:clipToPadding="false">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        >
+        <apps.sharabash.bzender.Utills.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/message_body"
+            android:background="@drawable/my_message"
+            android:textColor="@color/whitecolor"
+            android:padding="@dimen/margint"
+            android:textSize="@dimen/grid_txt_size"
+            android:text=""
+            />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</RelativeLayout>

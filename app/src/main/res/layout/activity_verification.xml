@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent"
+    >
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/background" />
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blakcolor"
+        android:alpha="0.65"
+        >
+    </android.support.v7.widget.LinearLayoutCompat>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_recycler_item_height"
+                        />
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="411"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        >
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/category_recycler_item_height"
+                            android:layout_gravity="center"
+                            android:scaleType="centerInside"
+                            android:layout_weight="132"
+                            android:src="@drawable/logo_white"
+                            />
+                    </android.support.v7.widget.LinearLayoutCompat>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20_height" />
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="411"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        >
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_weight="89"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.LinearLayoutCompat
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="233"
+                            android:orientation="vertical"
+                            >
+                            <android.support.v7.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="411"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                >
+                                <apps.sharabash.bzender.Utills.MyTextViewBold
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="@dimen/_15ssp"
+                                    android:text="@string/verification"
+                                    android:textColor="@color/whitecolor"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    />
+                            </android.support.v7.widget.LinearLayoutCompat>
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_4_height" />
+                            <apps.sharabash.bzender.Utills.MyTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/_7ssp"
+                                android:text="@string/send_the_code_that_was_sent_to_phone_number"
+                                android:textColor="@color/whitecolor"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"
+                                />
+                            <Space
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_30_height" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_45_height"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:weightSum="212"
+                                >
+                                <EditText
+                                    android:id="@+id/edit_txt1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:digits="0123456789"
+                                    android:maxLength="1"
+                                    android:layout_weight="45"
+                                    android:layout_gravity="center"
+                                    android:inputType="number"
+                                    android:gravity="center"
+                                    android:background="@color/whitecolor"
+                                    android:textSize="@dimen/tab_text_size"
+                                    android:importantForAutofill="no" />
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_weight="8"
+                                    android:layout_height="wrap_content" />
+
+                                <EditText
+                                    android:id="@+id/edit_txt2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:digits="0123456789"
+                                    android:maxLength="1"
+                                    android:layout_weight="45"
+                                    android:layout_gravity="center"
+                                    android:inputType="number"
+                                    android:gravity="center"
+                                    android:background="@color/whitecolor"
+                                    android:textSize="@dimen/tab_text_size"
+                                    android:importantForAutofill="no" />
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_weight="8"
+                                    android:layout_height="wrap_content" />
+
+                                <EditText
+                                    android:id="@+id/edit_txt3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:digits="0123456789"
+                                    android:maxLength="1"
+                                    android:layout_weight="45"
+                                    android:layout_gravity="center"
+                                    android:inputType="number"
+                                    android:gravity="center"
+                                    android:background="@color/whitecolor"
+                                    android:textSize="@dimen/tab_text_size"
+                                    android:importantForAutofill="no" />
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_weight="8"
+                                    android:layout_height="wrap_content" />
+
+                                <EditText
+                                    android:id="@+id/edit_txt4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:digits="0123456789"
+                                    android:maxLength="1"
+                                    android:layout_weight="45"
+                                    android:layout_gravity="center"
+                                    android:inputType="number"
+                                    android:gravity="center"
+                                    android:background="@color/whitecolor"
+                                    android:textSize="@dimen/tab_text_size"
+                                    android:importantForAutofill="no" />
+                                <Space
+                                    android:layout_width="0dp"
+                                    android:layout_weight="8"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+
+                        </android.support.v7.widget.LinearLayoutCompat>
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_weight="89"
+                            android:layout_height="wrap_content" />
+                    </android.support.v7.widget.LinearLayoutCompat>
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30_height" />
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="411"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        >
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_weight="146"
+                            android:layout_height="wrap_content" />
+
+                        <apps.sharabash.bzender.Utills.ButtonBook
+                            android:id="@+id/submit"
+                            android:layout_width="0dp"
+                            android:layout_weight="233"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/_12ssp"
+                            android:gravity="center"
+                            android:text="@string/continue_txt"
+                            android:textColor="@color/whitecolor"
+                            android:layout_gravity="center"
+                            android:background="@color/blakcolor"
+                            android:textStyle="bold"
+                            />
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_weight="144"
+                            android:layout_height="wrap_content" />
+                    </android.support.v7.widget.LinearLayoutCompat>
+                </android.support.v7.widget.LinearLayoutCompat>
+            </FrameLayout>
+        </android.support.v7.widget.LinearLayoutCompat>
+    </ScrollView>
+
+</FrameLayout>

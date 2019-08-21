@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_140sdp"
+    android:layout_marginTop="@dimen/_10_height"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/back_item" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="411">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <apps.sharabash.bzender.Utills.MyTextViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="344"
+                    android:text="@string/sponser"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.06"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.3" />
+
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.9">
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/person"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.06"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.525" />
+
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_4sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.684"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.4">
+
+
+                    <apps.sharabash.bzender.Utills.MyTextViewBold
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="@string/tinder_name"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_16ssp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/item_tinder_bg_one"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_3sdp"
+                        android:paddingBottom="@dimen/_4sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_4sdp"
+
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <apps.sharabash.bzender.Utills.MyTextViewBold
+                                    android:id="@+id/txt_days"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/_7sdp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textColor="@color/whitecolor"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <apps.sharabash.bzender.Utills.MyTextViewBold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/days"
+                                    android:textColor="@color/whitecolor"
+                                    android:textSize="@dimen/_10ssp" />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.2"
+                                android:gravity="top|center"
+                                android:text=":"
+                                android:textColor="@color/whitecolor"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="bold" />
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:layout_weight="1"
+
+                                android:orientation="vertical">
+
+                                <apps.sharabash.bzender.Utills.MyTextViewBold
+                                    android:id="@+id/txt_hrs"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/_7sdp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textColor="@color/whitecolor"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <apps.sharabash.bzender.Utills.MyTextViewBold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/hrs"
+                                    android:textColor="@color/whitecolor"
+                                    android:textSize="@dimen/_10ssp" />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="top"
+
+                                android:layout_weight="0.2"
+                                android:gravity="top|center"
+                                android:text=":"
+                                android:textColor="@color/whitecolor"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="bold" />
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <apps.sharabash.bzender.Utills.MyTextViewBold
+                                    android:id="@+id/txt_mins"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="@dimen/_4sdp"
+                                    android:layout_marginBottom="@dimen/_7sdp"
+                                    android:layout_weight="1"
+
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textColor="@color/whitecolor"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <apps.sharabash.bzender.Utills.MyTextViewBold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/mins"
+                                    android:textColor="@color/whitecolor"
+                                    android:textSize="@dimen/_10ssp" />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.2"
+                                android:gravity="top|center"
+                                android:text=":"
+                                android:textColor="@color/whitecolor"
+                                android:textSize="@dimen/_14sdp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:layout_weight="1"
+
+                                android:orientation="vertical">
+
+                                <apps.sharabash.bzender.Utills.MyTextViewBold
+                                    android:id="@+id/txt_secs"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="@dimen/_7sdp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="00"
+                                    android:textColor="@color/whitecolor"
+                                    android:textSize="@dimen/_10ssp" />
+
+                                <apps.sharabash.bzender.Utills.MyTextViewBold
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/secs"
+                                    android:textColor="@color/whitecolor"
+                                    android:textSize="@dimen/_10ssp" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:background="@drawable/item_tinder_bg_two"
+                        android:orientation="vertical">
+
+                        <apps.sharabash.bzender.Utills.MyTextViewBold
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/remain_time"
+                            android:textColor="@color/whitecolor"
+                            android:textSize="@dimen/_8ssp" />
+
+                    </FrameLayout>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.7">
+
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="@dimen/arrow_icon_size"
+                            android:layout_height="@dimen/arrow_icon_size"
+                            android:layout_gravity="center"
+                            android:src="@drawable/date" />
+
+                        <apps.sharabash.bzender.Utills.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="344"
+                            android:paddingStart="@dimen/_4_height"
+                            android:paddingEnd="@dimen/_4_height"
+                            android:text="@string/start_date"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_8ssp"
+                            android:textStyle="bold" />
+
+                        <apps.sharabash.bzender.Utills.MyTextView
+                            android:id="@+id/startDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="344"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_8ssp"
+                            android:textStyle="bold" />
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                    <android.support.v7.widget.LinearLayoutCompat
+                        android:id="@+id/linearLayoutCompat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.9">
+
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:layout_width="@dimen/arrow_icon_size"
+                            android:layout_height="@dimen/arrow_icon_size"
+                            android:src="@drawable/date" />
+
+                        <apps.sharabash.bzender.Utills.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="344"
+                            android:paddingStart="@dimen/_4_height"
+                            android:paddingEnd="@dimen/_4_height"
+                            android:text="@string/end_date"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_8ssp"
+                            android:textStyle="bold" />
+
+                        <apps.sharabash.bzender.Utills.MyTextView
+                            android:id="@+id/endDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="344"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_8ssp"
+                            android:textStyle="bold" />
+                    </android.support.v7.widget.LinearLayoutCompat>
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+
+                <apps.sharabash.bzender.Utills.MyTextViewBold
+                    android:id="@+id/count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="344"
+                    android:text="@string/_0"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.118"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.518" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/favourites_selected"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.975"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.LinearLayoutCompat>
+    </FrameLayout>
+</LinearLayout>

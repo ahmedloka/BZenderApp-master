@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/whitecolor"
+    android:paddingStart="@dimen/safe_margin"
+    android:paddingEnd="@dimen/safe_margin"
+    android:paddingTop="@dimen/_10_height"
+    android:layout_marginBottom="@dimen/_15_height"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:paddingBottom="@dimen/_10_height"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        />
+    <Space
+        android:layout_width="@dimen/safe_margin"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <apps.sharabash.bzender.Utills.MyTextViewBold
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="B-Zender"
+            android:textColor="@color/labanycolor"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_10_height" />
+        <apps.sharabash.bzender.Utills.MyTextViewBold
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blakcolor"
+            android:textSize="@dimen/_7ssp"
+            android:textStyle="bold" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_10_height" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+
+</LinearLayout>

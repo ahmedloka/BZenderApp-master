@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/whitecolor"
+    >
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30_height" />
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_88_dp_height"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:src="@drawable/verified"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4_height" />
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="411"
+        android:gravity="center"
+        >
+        <apps.sharabash.bzender.Utills.MyTextView
+            android:layout_width="0dp"
+            android:layout_weight="320"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_20ssp"
+            android:text="@string/thanks_for_complain"
+            android:textColor="@color/blakcolor"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30_height" />
+    <apps.sharabash.bzender.Utills.ButtonBook
+        android:id="@+id/ok"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_45_height"
+        android:layout_gravity="center"
+        android:background="@color/app_color_dark"
+        android:gravity="center"
+        android:paddingStart="@dimen/safe_margin"
+        android:paddingTop="@dimen/_10_height"
+        android:paddingEnd="@dimen/safe_margin"
+        android:paddingBottom="@dimen/_10_height"
+        android:text="@string/ok"
+        android:textColor="@color/whitecolor"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="bold" />
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30_height" />
+</LinearLayout>

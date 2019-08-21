@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/background" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.65"
+        android:background="@color/blakcolor">
+
+    </android.support.v7.widget.LinearLayoutCompat>
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="658">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/restaurant_card_height"
+            />
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_restaurant_height"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo_white"
+                />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_53_height" />
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:weightSum="411"
+            android:gravity="center"
+            >
+
+            <apps.sharabash.bzender.Utills.ButtonBook
+                android:id="@+id/login"
+                android:layout_width="0dp"
+                android:layout_weight="233"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/whitecolor"
+                android:gravity="center"
+                android:paddingStart="@dimen/safe_margin"
+                android:paddingTop="@dimen/_10_height"
+                android:paddingEnd="@dimen/safe_margin"
+                android:paddingBottom="@dimen/_10_height"
+                android:text="@string/login"
+                android:textColor="@color/blakcolor"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20_height" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:weightSum="411"
+            android:gravity="center"
+            >
+
+            <apps.sharabash.bzender.Utills.ButtonBook
+                android:id="@+id/register"
+                android:layout_width="0dp"
+                android:layout_weight="233"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/whitecolor"
+                android:gravity="center"
+                android:paddingStart="@dimen/safe_margin"
+                android:paddingTop="@dimen/_10_height"
+                android:paddingEnd="@dimen/safe_margin"
+                android:paddingBottom="@dimen/_10_height"
+                android:text="@string/sign_up"
+                android:textColor="@color/blakcolor"
+                android:textSize="@dimen/_13ssp"
+                android:textStyle="bold" />
+
+        </android.support.v7.widget.LinearLayoutCompat>
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_15_height" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:weightSum="411"
+            android:gravity="center"
+            >
+
+            <apps.sharabash.bzender.Utills.MyTextView
+                android:id="@+id/mBtnSignUp"
+                android:layout_width="0dp"
+                android:layout_weight="233"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/by_using_bzender_you_agree_to_bzender_s_terms_of_use_and_privacy_policy"
+                android:textColor="@color/whitecolor"
+                android:textSize="@dimen/_7ssp"
+                android:textStyle="bold" />
+
+
+        </android.support.v7.widget.LinearLayoutCompat>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_restaurant_height" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="411">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="178" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="22"
+                android:scaleType="centerInside"
+                android:src="@drawable/facebook" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="22"
+                android:scaleType="centerInside"
+                android:src="@drawable/gmail" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="178" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</FrameLayout>

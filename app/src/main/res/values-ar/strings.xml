@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BZender</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="password">كلمة المرور</string>
+    <string name="forget_password">نسيت كلمة المرور</string>
+    <string name="no_have_account_yet_create_one">لا تمتلك حساب ؟</string>
+    <string name="register">إنشاء حساب</string>
+    <string name="name">الاسم</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="email">الايميل</string>
+    <string name="country">الدولة</string>
+    <string name="my_profile">الصفحة الشخصية</string>
+    <string name="tinder">مناقصاتي</string>
+    <string name="call_us">اتصل بنا</string>
+    <string name="about_us">من نحن</string>
+    <string name="log_out">تسجيل الخروج</string>
+    <string name="sign_up">إنشاء حساب</string>
+    <string name="by_using_bzender_you_agree_to_bzender_s_terms_of_use_and_privacy_policy">باستخدامك BZENDER انت توافق علي الشروط والاحكام</string>
+    <string name="we_just_need_your_registered_phone_to_sent_your_password_reset_instruction">يجب عليك ادخال الايميل لاعادة تعيين كلمة المرور</string>
+    <string name="reset_password">إعادة تعيين كلمة المرور</string>
+    <string name="back">رجوع</string>
+    <string name="verification">التفعيل</string>
+    <string name="send_the_code_that_was_sent_to_phone_number">ادخل الكود المرسل علي رقم الهاتف</string>
+    <string name="continue_txt">استمرا</string>
+    <string name="add_tinder">إضافة مناقصة</string>
+    <string name="description">وصف بسيط , رجاء لا تكتب السعر او الكمية</string>
+    <string name="start_date">تاريخ البداية</string>
+    <string name="end_date">تاريخ الانتهاء</string>
+    <string name="terms_and_condition">الشروط والاحكام</string>
+    <string name="notification">الاشعارات</string>
+    <string name="_0">0</string>
+    <string name="sponser">مشارك</string>
+    <string name="tinder_name">اسم المناقصة</string>
+    <string name="book">حجز</string>
+    <string name="notifications">الاشعارات</string>
+    <string name="chats">الدردشة</string>
+    <string name="online">نشط</string>
+
+
+    <string name="skip">تخطي</string>
+    <string name="start">ابدأ</string>
+
+
+    <string name="next">التالي</string>
+
+
+    <string name="mobile_number">رقم الهاتف</string>
+    <string name="work_address">عنوان العمل</string>
+    <string name="work_position">مكان العمل</string>
+    <string name="national_id">رقم البطاقة</string>
+    <string name="email_address">البريد الألكترونى</string>
+    <string name="how_it_work">كيف تعمل ؟</string>
+    <string name="address">المدينة</string>
+    <string name="tender_title">عنوان المناقصة</string>
+    <string name="tender_type">نوع المناقصة</string>
+    <string name="vision">الرؤية</string>
+    <string name="mission">المهمة</string>
+    <string name="contact_us">اتصل بنا</string>
+    <string name="address_">العنوان :</string>
+    <string name="settings">الإعدادات</string>
+    <string name="phone_number">رقم الهاتف :</string>
+    <string name="message">رسالة</string>
+    <string name="send">إرسال</string>
+    <string name="ok">موافق</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="change_language">تغيير اللغة</string>
+    <string name="terms_and_conditions">الأحكام والشروط</string>
+    <string name="profile">الصفحة الشخصية</string>
+    <string name="my_tender">مناقصتي</string>
+    <string name="reserved_tender">المناقصة المحجوزة</string>
+    <string name="my_points">نقاطي</string>
+    <string name="edit_profile">تعديل الصفحة الشخصية</string>
+    <string name="save">حفظ</string>
+    <string name="old_password">كلمة المرور القديمة</string>
+    <string name="new_password">كلمة السر الجديدة</string>
+    <string name="language">الغة</string>
+    <string name="english">English</string>
+    <string name="arabic">العربية</string>
+    <string name="cancel">إلغاء</string>
+    <string name="error">خطأ</string>
+    <string name="tender_maker">القائم بالمناقصة</string>
+    <string name="tender_details">تفاصيل المناقصة</string>
+
+    <string name="success_message">لقد تم حجز المناقصة بنجاح</string>
+    <string name="title_is_empty">العنوان فارغ</string>
+    <string name="city_is_empty">المدينة فارغة</string>
+    <string name="start_date_error">تاريخ البداية فارغ</string>
+    <string name="end_date_error">تاريخ النهاية فارغ</string>
+    <string name="desc_error">الوصف فارغ</string>
+    <string name="cat_id_empty">عنوان المناقصة مطلوب</string>
+    <string name="complaint_msg_empty">رسالة الشكوى مطلوبة</string>
+    <string name="user_name_error">الأسم مطلوب</string>
+    <string name="email_error">البريد الالكتروني مطلوب</string>
+    <string name="country_code_error">كود البلد مطلوب</string>
+    <string name="mobile_number_error">رقم الهاتف مطلوب</string>
+    <string name="address_is_empty">العنوان مطلوب</string>
+    <string name="old_pass_error">كلمة المرور القديمة مطلوبة</string>
+    <string name="new_pass_error">كلمة المرور الجديدة مطلوبة</string>
+    <string name="confirm_pass_error">تأكيد كلمة المرور مطلوب</string>
+
+
+    <string name="bidder">المشارك فى المناقصة</string>
+    <string name="intro_one_first_txt">أول تطبيق للمناقصات</string>
+    <string name="intro_one_second_txt">جميع الأسواق في التطبيق بضغطة واحدة</string>
+    <string name="intro_two_first_txt">أول منصة للمناقصات اون لاين</string>
+    <string name="intro_two_second_txt">اعمل مناقصة عن طريق التطبيق من المكتب او البيت</string>
+    <string name="intro_three_first_txt">تأمين البيانات بدون رشوة</string>
+    <string name="intro_three_second_txt">طريقك واحد</string>
+    <string name="intro_four_first_txt">أفضل النتائج للجميع</string>
+    <string name="intro_four_second_txt">أفضل أسعار وجودة للصناع وافضل تسويق ومبيعات للمزايدات</string>
+
+    <string name="complete_add_tinder_sec">تمت العلمية بنجاح و سوف يتم خصم 400 نقطة بمجرد موافقة الأدمن .</string>
+    <string name="individual_person">الشخص منفرد</string>
+    <string name="business">اعمال</string>
+    <string name="fill_data">أكمل بيانات المناقصة
+</string>
+    <string name="default_notification_channel_id">defaultNotificationId</string>
+    <string name="remain_time">الوقت المتبقى</string>
+    <string name="days">أيام
+</string>
+    <string name="hrs">ساعات</string>
+    <string name="mins">دقائق</string>
+    <string name="secs">ثواني</string>
+    <string name="city">المدينة</string>
+    <string name="congratulations">تهانينا</string>
+    <string name="view_tender_details">عرض تفاصيل المناقصة
+</string>
+    <string name="car_type">نوع السيارة</string>
+    <string name="car_model">موديل السيارة</string>
+    <string name="kilometers">كم</string>
+    <string name="to">
+</string>
+    <string name="transmission_type">ناقل الحركة</string>
+    <string name="manual">يدوي/عادي</string>
+    <string name="automatic">اوتوماتيك</string>
+    <string name="year_of_cars">سنة الصنع
+</string>
+    <string name="num_of_cars">عدد السيارات
+</string>
+    <string name="origin_in_man">بلد الصنع
+</string>
+    <string name="electrical_until">الكهربائية حتى الوضع
+</string>
+    <string name="neww">جديد</string>
+    <string name="used">مستخدم</string>
+    <string name="guarantee">ضمان</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="electrical_type">الكهربائية حتى النوع
+</string>
+    <string name="model">نموذج</string>
+    <string name="year_of_manu">سنة الصنع</string>
+    <string name="number_of_unit">عدد الوحدات
+</string>
+    <string name="violation_certificate">هل تمتلك شهادة مخالفات ؟
+</string>
+    <string name="license_status">حالة الرخصة سارية</string>
+    <string name="registration_fees"> تم دفع رسوم التسجيل في الشهر العقاري
+</string>
+    <string name="the_possibility_of">إمكانية الفحص
+</string>
+    <string name="engine_capacity">سعة المحرك</string>
+    <string name="extra_features">ميزات اضافية</string>
+    <string name="note_error">الملاحظات مطلوبة
+</string>
+    <string name="year_of_car_error">مطلوب سنة من السيارة
+</string>
+    <string name="numer_of_car_error">عدد السيارات مطلوب
+</string>
+    <string name="from_km_is_required">من الي كيلومتر مطلوب
+</string>
+    <string name="car_typr_error">نوع السيارة مطلوب
+</string>
+    <string name="car_model_error">مطلوب نموذج سيارة
+</string>
+    <string name="type_required">النوع مطلوب
+</string>
+    <string name="model_error">مطلوب نموذج الكهربائية
+</string>
+    <string name="year_error">السنة مطلوبة
+</string>
+    <string name="number_of_error">عدد الوحدات المطلوبة
+</string>
+    <string name="country_error">الدولة مطلوبة</string>
+    <string name="price_is_required">السعر مطلوب
+</string>
+
+
+    <string name="response_one">تم الإنشاء بنجاح
+</string>
+    <string name="response_two">لم يتم العثور</string>
+    <string name="response_three">حدث شيء خاطئ
+</string>
+    <string name="response_four">تم تغيير الرقم السري بنجاح</string>
+    <string name="response_five">كلمة سر خاطئة</string>
+    <string name="response_six">غير صالح</string>
+    <string name="response_seven">هذه الخانة مطلوبه</string>
+    <string name="response_eight">تم الحذف بنجاح</string>
+    <string name="response_nine">لا يمكنك حجز المناقصة نفسها مرتين
+</string>
+    <string name="response_ten">يجب عليك تفعيل حسابك
+</string>
+    <string name="response_eleven">البريد الإلكتروني غير صحيح
+</string>
+    <string name="response_twelve">يرجى تحميل صورة من النوع .jpg أو .gif أو .png
+</string>
+    <string name="response_thirteen">يرجى تحميل ملف يصل إلى 5 ميغابايت
+</string>
+    <string name="response_fourteen">تم تحديث الصورة بنجاح
+</string>
+    <string name="response_fivteen">يرجى تحميل صورة
+</string>
+    <string name="default_error">حدث خطأ ما
+</string>
+    <string name="response_sexteen">إرسال البريد بنجاح</string>
+    <string name="response_sevteen">البريد الإلكتروني مسجل من قبل</string>
+    <string name="response_eighteen">الاسم غير صالح
+</string>
+    <string name="response_ninteen">يجب أن تكون كلمة المرور على الأقل 6 أحرف
+</string>
+    <string name="response_twenty">شيء خاطئ مع تحميل الصورة</string>
+    <string name="response_twenty_one">غير صحيح البريد الإلكتروني</string>
+    <string name="response_twenty_four">بلد غير صالح
+</string>
+    <string name="response_twenty_five">مدينة غير صالحة
+</string>
+    <string name="response_twenty_sex">حاول مرة أخرى في وقت لاحق</string>
+    <string name="response_ninty_sex">لا يمكنك تحميل أكثر من 6 صور
+</string>
+    <string name="response_ninty_eight">هذا رقم الهاتف مسجل من قبل
+</string>
+    <string name="response_ninty_nine">رصيدك أقل من 400
+</string>
+    <string name="response_one_hundred_and_one">الرمز غير صالح</string>
+    <string name="password_error">كلمة المرور مطلوبة</string>
+    <string name="password_size">يجب أن تكون كلمة المرور أكبر من 6
+</string>
+    <string name="confirm_pass_error_match">كلمة المرور غير متطابقة
+</string>
+    <string name="register_successfully">تم إنشاء حسابك بنجاح ولديك  </string>
+    <string name="cat_cars">سيارات
+</string>
+    <string name="cat_electronincs">إلكترونيات
+</string>
+    <string name="create_an_account">انشئ حساب </string>
+    <string name="email_inavlid">البريد الإلكتروني غير صحيح
+</string>
+    <string name="mobile_number_inavlid">رقم الهاتف غير صحيح
+</string>
+    <string name="code_error">رمز التحقق مطلوب</string>
+    <string name="account_verified">تم التحقق من حسابك بنجاح</string>
+    <string name="point">نقطة</string>
+    <string name="error_verfication">برجاء التأكد من رمز التحقق</string>
+    <string name="item_details">تفاصيل العنصر</string>
+    <string name="show_success_for_edit">تم تعديل الأكونت بنجاح</string>
+    <string name="password_changed">لقد تم تغير الباسورد بنجاح</string>
+    <string name="please_downlaod_whats_app"> اولا لأستخدام هذه الخدمة What\'s App الرجاء تحميل</string>
+    <string name="slogan">They Compete Makes You Win</string>
+    <string name="gellery">المعرض</string>
+    <string name="camera">الكاميرا</string>
+    <string name="choose_an_img">اختار صورة</string>
+    <string name="access_to_external_required">الوصول للذاكرة الخارجية</string>
+    <string name="allow">سماح</string>
+    <string name="deny">رفض</string>
+    <string name="write_message_here">اكتب الرسالة هنا</string>
+    <string name="my_booking">حجزاتي</string>
+    <string name="objective">هدفنا</string>
+    <string name="thanks_for_complain">شكرا لتقديم الشكوي , و سيتم التواصل معك بأسرع وقت ممكن</string>
+    <string name="upload_images">رفع الصور</string>
+    <string name="ele_un_type">نوع المنتج :</string>
+    <string name="modell">الموديل :</string>
+    <string name="year_of_man">سنة الصنع :</string>
+    <string name="numb_of_un">عدد الوحدات :</string>
+    <string name="elec_uni_stat">حالة المنتج :</string>
+    <string name="origin_of_man">بلد الصنع :</string>
+    <string name="extra_feat">مميزات اضافية :</string>
+    <string name="price">السعر</string>
+    <string name="enter_price">اكتب السعر هنا</string>
+    <string name="le">جنيه</string>
+    <string name="desc">الوصف</string>
+    <string name="car_typ">نوع السيارة :</string>
+    <string name="car_mo">موديل السيارة :</string>
+    <string name="year_of_ccar">سنة الصنع :</string>
+    <string name="num_of_ccar">عدد السيارات :</string>
+    <string name="km">كم :</string>
+    <string name="tra_type">ناقل الحركة :</string>
+    <string name="lic_stat">حالة الرخصة سارية :</string>
+    <string name="fees_paid">تم دفع رسوم التسجيل في الشهر العقاري :</string>
+    <string name="can_scan">امكانية فحص المنتج :</string>
+    <string name="engine_capa">سعة المحرك :</string>
+    <string name="expired">منتهية</string>
+    <string name="ongoing">سارية</string>
+    <string name="paid">مدفوعة</string>
+    <string name="unpaid">غير مدفوعة</string>
+    <string name="error_in_date">يرجى اختيار تاريخ صالح</string>
+    <string name="pls_choose_start">الرجاء اختيار تاريخ البدء أولاً</string>
+    <string name="error_date_one">من فضلك اختر تاريخ قادم و ليس حالي او سابق</string>
+    <string name="error_date_year">من فضلك اختر تاريخ في السنة الحالية</string>
+    <string name="error_month">الشهر المختار يجب ان يكون اكبر من الحالي بثلاث شهور كأقصى مده </string>
+    <string name="error_end_date_one">تاريخ النهاية يجب ان يكون اكبر من تاريخ البداية</string>
+    <string name="error_end_date_two">يجب أن يكون تاريخ الانتهاء أكبر خمسة أيام على الأقل من تاريخ البدء على الأقل</string>
+    <string name="error_end_date_three">يجب أن يكون تاريخ الانتهاء أكبر بـ 10 أيام من تاريخ البدء على الأكثر</string>
+    <string name="done">تم</string>
+    <string name="payment">التعاملات المالية</string>
+    <string name="waiting_for_develop_payment_system">في انتظار تطوير نظام الدفع</string>
+
+
+</resources>
