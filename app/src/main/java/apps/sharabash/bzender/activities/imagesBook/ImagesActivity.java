@@ -23,6 +23,7 @@ import android.support.v7.widget.AppCompatImageView;
 import android.util.Log;
 import android.view.View;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.CustomTarget;
@@ -195,9 +196,8 @@ public class ImagesActivity extends AppCompatActivity implements View.OnClickLis
                 Intent intent = new Intent(this, Home.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
-
-                overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
                 finish();
+                Animatoo.animateFade(this);
                 break;
 
         }

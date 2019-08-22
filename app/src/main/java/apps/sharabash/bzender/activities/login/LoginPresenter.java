@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.Patterns;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import org.json.JSONObject;
 
 import apps.sharabash.bzender.Models.login.loginRequestModel;
@@ -25,7 +27,7 @@ import rx.subscriptions.CompositeSubscription;
 
 import static apps.sharabash.bzender.Utills.Constant.buildDialog;
 
-class loginPresenter {
+class LoginPresenter {
 
     private final DialogLoader dialogLoader;
     private final Context context;
@@ -34,7 +36,7 @@ class loginPresenter {
     private String paswordFor;
     private String emailFor;
 
-    loginPresenter(Context context, loginInterface loginInterface) {
+    LoginPresenter(Context context, loginInterface loginInterface) {
         this.context = context;
         mSubscriptions = new CompositeSubscription();
         dialogLoader = new DialogLoader();
@@ -128,9 +130,9 @@ class loginPresenter {
         Intent intent = new Intent(context, Home.class);
         intent.putExtra(Constant.Username, loginResponse.getFullName());
         context.startActivity(intent);
-        ((Activity) context).overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         ((Activity) context).finish();
+        Animatoo.animateSplit(context);
     }
 
 }

@@ -5,10 +5,19 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import apps.sharabash.bzender.R;
 import apps.sharabash.bzender.Utills.Constant;
 
 public class ChooseHowItWork extends AppCompatActivity {
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Animatoo.animateInAndOut(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

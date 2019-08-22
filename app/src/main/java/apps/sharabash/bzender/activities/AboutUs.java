@@ -5,10 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatImageView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import apps.sharabash.bzender.R;
 
 public class AboutUs extends AppCompatActivity {
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Animatoo.animateInAndOut(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +26,7 @@ public class AboutUs extends AppCompatActivity {
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateInAndOut(this);
         });
     }
 }

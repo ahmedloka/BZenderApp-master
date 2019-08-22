@@ -299,7 +299,7 @@
     <string name="error_date_year">من فضلك اختر تاريخ في السنة الحالية</string>
     <string name="error_month">الشهر المختار يجب ان يكون اكبر من الحالي بثلاث شهور كأقصى مده </string>
     <string name="error_end_date_one">تاريخ النهاية يجب ان يكون اكبر من تاريخ البداية</string>
-    <string name="error_end_date_two">يجب أن يكون تاريخ الانتهاء أكبر خمسة أيام على الأقل من تاريخ البدء على الأقل</string>
+    <string name="error_end_date_two">يجب أن يكون تاريخ الانتهاء أكبر 5 أيام على الأقل من تاريخ البدء</string>
     <string name="error_end_date_three">يجب أن يكون تاريخ الانتهاء أكبر بـ 10 أيام من تاريخ البدء على الأكثر</string>
     <string name="done">تم</string>
     <string name="payment">التعاملات المالية</string>

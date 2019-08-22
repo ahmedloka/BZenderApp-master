@@ -11,6 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.net.URLEncoder;
 
 import apps.sharabash.bzender.Models.metadataCar.MetaDataCar;
@@ -39,6 +41,12 @@ public class ContactUs extends AppCompatActivity implements View.OnClickListener
 
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateInAndOut(this);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
@@ -51,6 +59,7 @@ public class ContactUs extends AppCompatActivity implements View.OnClickListener
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateInAndOut(this);
         });
 
 
@@ -94,18 +103,21 @@ public class ContactUs extends AppCompatActivity implements View.OnClickListener
                 intent.putExtra(Constant.URL_KEY, url);
 
                 startActivity(intent);
+                Animatoo.animateSlideRight(this);
                 break;
             case R.id.instgram:
                 url = Constant.INSTGRAM_URL;
                 intent.putExtra(Constant.URL_KEY, url);
 
                 startActivity(intent);
+                Animatoo.animateSlideRight(this);
                 break;
             case R.id.twitter:
                 url = Constant.TWITTER_URL;
                 intent.putExtra(Constant.URL_KEY, url);
 
                 startActivity(intent);
+                Animatoo.animateSlideRight(this);
                 break;
             case R.id.what_app:
 

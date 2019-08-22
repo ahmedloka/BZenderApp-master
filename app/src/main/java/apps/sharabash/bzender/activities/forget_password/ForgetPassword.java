@@ -7,6 +7,8 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.util.Objects;
 
 import apps.sharabash.bzender.R;
@@ -19,6 +21,12 @@ public class ForgetPassword extends AppCompatActivity implements View.OnClickLis
     private ForgetPasswordPresenter forgetPasswordPresenter;
 
     private MyEditText mETMail;
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateSlideLeft(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +42,7 @@ public class ForgetPassword extends AppCompatActivity implements View.OnClickLis
 
         back.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateSlideLeft(this);
         });
 
         ButtonBook mtnBook = findViewById(R.id.reset_password);

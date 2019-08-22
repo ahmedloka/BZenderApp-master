@@ -11,6 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +38,14 @@ public class AllTenderActivity extends AppCompatActivity implements TendersInter
     private MyTextViewBold mTxtEmpty;
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        NavUtils.navigateUpFromSameTask(this);
+        Animatoo.animateFade(this);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_items);
@@ -46,6 +56,7 @@ public class AllTenderActivity extends AppCompatActivity implements TendersInter
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateFade(this);
         });
 
         mRecyclerViewAllTender = findViewById(R.id.recycler);
@@ -132,6 +143,8 @@ public class AllTenderActivity extends AppCompatActivity implements TendersInter
             mRecyclerViewAllTender.setHasFixedSize(true);
             AllTenderRecyclerAdapter recyclerAdapter = new AllTenderRecyclerAdapter(this, allTenderRecyclerItem, this);
             mRecyclerViewAllTender.setAdapter(recyclerAdapter);
+            Constant.runLayoutAnimation(mRecyclerViewAllTender);
+
         }
 
     }
@@ -153,6 +166,10 @@ public class AllTenderActivity extends AppCompatActivity implements TendersInter
         }
 
         startActivity(intent);
+        finish();
+        Animatoo.animateSlideRight(this);
+
+
 
 //        //intent.putExtra(Constant.TENDER_ID)
 //        if (tenderCarId.size() > 1) {

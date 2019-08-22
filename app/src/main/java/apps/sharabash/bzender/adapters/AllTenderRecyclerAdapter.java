@@ -24,10 +24,6 @@ public class AllTenderRecyclerAdapter extends RecyclerView.Adapter<AllTenderRecy
 
     private static final String TAG = "AdapterAllTenders";
 
-    private static String TIMER_DAYS;
-    private static String TIMER_HRS;
-    private static String TIMER_MINS;
-    private static String TIMER_SECS;
     private final OnClickHandler onClickHandler;
 
 
@@ -89,7 +85,6 @@ public class AllTenderRecyclerAdapter extends RecyclerView.Adapter<AllTenderRecy
             CountTinerDownTimer countDownTimer = new CountTinerDownTimer(difference, 1000, holder.txtDays, holder.txtHrs, holder.txtMins, holder.txtSecs);
             countDownTimer.start();
 
-            Log.d(TAG, "onBindViewHolder: " + TIMER_DAYS);
 
 //            Timer t = new Timer();
 //            t.scheduleAtFixedRate(new TimerTask() {
@@ -166,10 +161,10 @@ public class AllTenderRecyclerAdapter extends RecyclerView.Adapter<AllTenderRecy
         final TextView count;
         //SimpleRatingBar offer_rate;
 
-        private final MyTextViewBold txtDays;
-        private final MyTextViewBold txtHrs;
-        private final MyTextViewBold txtMins;
-        private final MyTextViewBold txtSecs;
+        public final MyTextViewBold txtDays;
+        public final MyTextViewBold txtHrs;
+        public final MyTextViewBold txtMins;
+        public final MyTextViewBold txtSecs;
 
 
         ViewHolder(View itemView) {

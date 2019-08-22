@@ -21,6 +21,8 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -51,7 +53,7 @@ import apps.sharabash.bzender.adapters.filterAreaAdapter;
 import apps.sharabash.bzender.adapters.filterAreaModelRecycler;
 import rx.subscriptions.CompositeSubscription;
 
-public class AddTinder extends AppCompatActivity implements homeInterface, View.OnClickListener, AddTinderInterface, DatePickerDialog.OnDateSetListener, FillDataCarInterface {
+public class AddTender extends AppCompatActivity implements homeInterface, View.OnClickListener, AddTinderInterface, DatePickerDialog.OnDateSetListener, FillDataCarInterface {
 
     private static final String TAG = "tag";
     private final ArrayList<filterAreaModelRecycler> DialogList = new ArrayList<>();
@@ -82,6 +84,13 @@ public class AddTinder extends AppCompatActivity implements homeInterface, View.
     private DialogFragment dialogFragment, dialogFragmentTwo;
 
     //
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateSlideDown(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,7 +142,7 @@ public class AddTinder extends AppCompatActivity implements homeInterface, View.
     private void show_dialig() {
         AlertDialog.Builder builder1;
         final AlertDialog dialog1;
-        builder1 = new AlertDialog.Builder(AddTinder.this);
+        builder1 = new AlertDialog.Builder(AddTender.this);
         View mview = getLayoutInflater().inflate(R.layout.area_dialog, null);
         TextView header = mview.findViewById(R.id.DialogHeader);
         TextView All = mview.findViewById(R.id.All);
@@ -175,7 +184,7 @@ public class AddTinder extends AppCompatActivity implements homeInterface, View.
     private void show_dialigForCities() {
         AlertDialog.Builder builder1;
         final AlertDialog dialog1;
-        builder1 = new AlertDialog.Builder(AddTinder.this);
+        builder1 = new AlertDialog.Builder(AddTender.this);
         View mview = getLayoutInflater().inflate(R.layout.area_dialog, null);
         TextView header = mview.findViewById(R.id.DialogHeader);
         TextView All = mview.findViewById(R.id.All);
@@ -265,7 +274,7 @@ public class AddTinder extends AppCompatActivity implements homeInterface, View.
 
     private void initView() {
 
-        addTinderPresenter = new AddTinderPresenter(AddTinder.this, this);
+        addTinderPresenter = new AddTinderPresenter(AddTender.this, this);
 
         dialogFragment = new DatePickerFragment();
         dialogFragmentTwo = new DatePickerFragment();
@@ -273,6 +282,7 @@ public class AddTinder extends AppCompatActivity implements homeInterface, View.
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateSlideDown(this);
         });
 
         mTinderTitle = findViewById(R.id.tinder_title);

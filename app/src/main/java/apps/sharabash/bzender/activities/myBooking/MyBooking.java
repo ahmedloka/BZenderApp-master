@@ -9,12 +9,15 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import apps.sharabash.bzender.Models.my_tenders.MyBookingBody;
 import apps.sharabash.bzender.Models.my_tenders.MyTendersBody;
 import apps.sharabash.bzender.R;
+import apps.sharabash.bzender.Utills.Constant;
 import apps.sharabash.bzender.Utills.MyTextViewBold;
 import apps.sharabash.bzender.adapters.ItemBookingModel;
 import apps.sharabash.bzender.adapters.MyBookingAdapter;
@@ -25,6 +28,12 @@ public class MyBooking extends AppCompatActivity implements MyTenderInterface {
     private RecyclerView nearByRecyclerView;
     private MyTextViewBold mTxtEmpty;
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateInAndOut(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +51,7 @@ public class MyBooking extends AppCompatActivity implements MyTenderInterface {
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateInAndOut(this);
         });
 
 
@@ -92,6 +102,8 @@ public class MyBooking extends AppCompatActivity implements MyTenderInterface {
         MyBookingAdapter nearByRecyclerAdapter = new MyBookingAdapter(MyBooking.this, itemModels);
 
         nearByRecyclerView.setAdapter(nearByRecyclerAdapter);
+        Constant.runLayoutAnimation(nearByRecyclerView);
+
 
 
     }

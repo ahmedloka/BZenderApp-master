@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import org.json.JSONObject;
 
 import apps.sharabash.bzender.Models.FillDataElectrical;
@@ -219,6 +221,7 @@ class FillDataElectricalPresenter {
             Intent intent = new Intent(mContext, Home.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
             mContext.startActivity(intent);
+            Animatoo.animateFade(mContext);
         });
 
 

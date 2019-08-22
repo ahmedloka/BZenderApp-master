@@ -30,6 +30,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.CustomTarget;
@@ -100,6 +101,12 @@ public class EditProfile extends AppCompatActivity implements View.OnClickListen
 
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateSlideLeft(this);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
@@ -119,6 +126,7 @@ public class EditProfile extends AppCompatActivity implements View.OnClickListen
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateSlideLeft(this);
         });
 
         AddTinderPresenter addTinderPresenter = new AddTinderPresenter(this, this);

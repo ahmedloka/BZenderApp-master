@@ -11,6 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +33,12 @@ public class ChatListActivity extends AppCompatActivity implements AllUsersChatI
 
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateSlideUp(this);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
@@ -43,6 +51,7 @@ public class ChatListActivity extends AppCompatActivity implements AllUsersChatI
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateSlideUp(this);
         });
 
         AllUsersChatPresenter allUsersChatPresenter = new AllUsersChatPresenter(this, this);
@@ -103,5 +112,7 @@ public class ChatListActivity extends AppCompatActivity implements AllUsersChatI
 
         ChatListAdapter nearByRecyclerAdapter = new ChatListAdapter(ChatListActivity.this, itemModels);
         nearByRecyclerView.setAdapter(nearByRecyclerAdapter);
+        Constant.runLayoutAnimation(nearByRecyclerView);
+
     }
 }

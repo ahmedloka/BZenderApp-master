@@ -11,6 +11,8 @@ import android.support.v7.widget.LinearLayoutCompat;
 import android.util.Log;
 import android.view.View;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.util.Locale;
 import java.util.Objects;
 
@@ -68,6 +70,12 @@ public class TenderCarDetails extends AppCompatActivity implements View.OnClickL
 
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateSlideLeft(this);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tender_car_details);
@@ -89,6 +97,7 @@ public class TenderCarDetails extends AppCompatActivity implements View.OnClickL
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateSlideLeft(this);
         });
 
 

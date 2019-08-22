@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatImageView;
 import android.view.View;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import apps.sharabash.bzender.R;
 import apps.sharabash.bzender.Utills.ButtonBold;
 import apps.sharabash.bzender.Utills.MyEditText;
@@ -18,6 +20,11 @@ public class ChangePassword extends AppCompatActivity implements View.OnClickLis
 
     private ChangePasswordPresenter changePasswordPresenter;
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateSlideLeft(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +40,7 @@ public class ChangePassword extends AppCompatActivity implements View.OnClickLis
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateSlideLeft(this);
         });
 
         changePasswordPresenter = new ChangePasswordPresenter(this);

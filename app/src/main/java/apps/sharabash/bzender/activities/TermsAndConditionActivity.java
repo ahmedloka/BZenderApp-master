@@ -5,6 +5,8 @@ import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatImageView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import apps.sharabash.bzender.Models.metadataCar.MetaDataCar;
 import apps.sharabash.bzender.R;
 import apps.sharabash.bzender.Utills.MyTextView;
@@ -16,6 +18,12 @@ public class TermsAndConditionActivity extends AppCompatActivity implements Fill
     private MyTextView textView;
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateSlideLeft(this);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terms_and_condition);
@@ -23,6 +31,7 @@ public class TermsAndConditionActivity extends AppCompatActivity implements Fill
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateSlideLeft(this);
         });
 
         textView = findViewById(R.id.txt_terms);

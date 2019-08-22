@@ -7,7 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatImageView;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 import java.util.Locale;
 
@@ -23,13 +26,21 @@ public class Login extends AppCompatActivity implements loginInterface {
     private TextView userName;
     private TextView password;
 
-    private loginPresenter loginPresenter;
+    private LoginPresenter loginPresenter;
+    private ScrollView mImgBg;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mImgBg = findViewById(R.id.img_bg);
+        mImgBg.setOnTouchListener((v, event) -> {
+            Constant.hideKeyboardFrom(Login.this , v);
+            return true;
+        });
+
 
         SharedPreferences mSharedPreferences = getSharedPreferences("MySharedPreference", MODE_PRIVATE);
         String language = mSharedPreferences.getString(Constant.language, Locale.getDefault().getDisplayLanguage());
@@ -42,7 +53,7 @@ public class Login extends AppCompatActivity implements loginInterface {
         Button login = findViewById(R.id.login);
         FrameLayout register = findViewById(R.id.register);
 
-        loginPresenter = new loginPresenter(this, this);
+        loginPresenter = new LoginPresenter(this, this);
 
 
         sign_up.setOnClickListener(v -> {
@@ -54,7 +65,7 @@ public class Login extends AppCompatActivity implements loginInterface {
         register.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), SignUp.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+            Animatoo.animateSlideRight(this);
             //finish();
         });
         login.setOnClickListener(v -> {
@@ -70,7 +81,7 @@ public class Login extends AppCompatActivity implements loginInterface {
         forget_password.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), ForgetPassword.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+            Animatoo.animateSlideRight(this);
         });
 
 

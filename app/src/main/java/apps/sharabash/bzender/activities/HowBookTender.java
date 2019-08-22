@@ -20,6 +20,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import org.jetbrains.annotations.NotNull;
 
 import apps.sharabash.bzender.R;
@@ -181,8 +183,8 @@ public class HowBookTender extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Home.class);
         intent.putExtra(Constant.Username , getIntent().getStringExtra(Constant.Username));
         startActivity(intent);
-        overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        Animatoo.animateSlideLeft(this);
         finish();
     }
 

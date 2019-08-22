@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.util.Locale;
 
 import apps.sharabash.bzender.Models.TendersDetails.TenderDetails;
@@ -35,6 +37,12 @@ public class TinderDetails extends AppCompatActivity implements TenderDetailsInt
     private String tenderId;
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateSlideLeft(this);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tinder_details);
@@ -55,6 +63,7 @@ public class TinderDetails extends AppCompatActivity implements TenderDetailsInt
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateSlideLeft(this);
         });
 
         mTxtStart = findViewById(R.id.startDate);
@@ -124,11 +133,13 @@ public class TinderDetails extends AppCompatActivity implements TenderDetailsInt
                 intent.putExtra(Constant.TENDER_ID, tenderId);
                 startActivity(intent);
                 finish();
+                Animatoo.animateSlideRight(this);
             } else {
                 intent = new Intent(this, TenderElectricalDetails.class);
                 intent.putExtra(Constant.TENDER_ID, tenderId);
                 startActivity(intent);
                 finish();
+                Animatoo.animateSlideRight(this);
             }
         }
     }

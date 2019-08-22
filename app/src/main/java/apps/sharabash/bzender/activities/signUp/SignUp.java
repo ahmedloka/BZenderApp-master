@@ -17,18 +17,24 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.CustomTarget;
@@ -95,7 +101,14 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener, E
     private Bitmap bitmap;
     private Uri mProfileImageUri;
     private String base64;
+    private ScrollView mImgBg;
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateSlideLeft(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +120,13 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener, E
     }
 
     private void initViews() {
+
+        mImgBg = findViewById(R.id.img_bg);
+        mImgBg.setOnTouchListener((v, event) -> {
+            Constant.hideKeyboardFrom(SignUp.this , v);
+            return true;
+        });
+
         AVLoadingIndicatorView mAviSignUp = findViewById(R.id.avi);
 
         SharedPreferences mSharedPreferences = getSharedPreferences("MySharedPreference", MODE_PRIVATE);

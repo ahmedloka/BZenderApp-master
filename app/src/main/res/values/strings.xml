@@ -248,7 +248,7 @@
     <string name="error_date_year">Please select a date in the current year</string>
     <string name="error_month">The selected month must be three months larger than the current one</string>
     <string name="error_end_date_one">The end date must be greater than the start date</string>
-    <string name="error_end_date_two">The end date must be at least five days larger than the start date at least</string>
+    <string name="error_end_date_two">The end date must be at least 5 days larger than the start date</string>
     <string name="error_end_date_three">The end date must be 10 days larger than the start date at most</string>
     <string name="done">Done</string>
     <string name="payment">Financial Transactions</string>

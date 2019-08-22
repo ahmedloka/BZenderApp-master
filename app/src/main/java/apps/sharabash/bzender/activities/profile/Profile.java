@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatImageView;
 import android.view.View;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
@@ -32,6 +33,13 @@ public class Profile extends AppCompatActivity implements ProfileInterface, View
 
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Animatoo.animateInAndOut(this);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
@@ -48,6 +56,7 @@ public class Profile extends AppCompatActivity implements ProfileInterface, View
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateInAndOut(this);
         });
 
         ProfilePresenter profilePresenter = new ProfilePresenter(this, this);
@@ -91,6 +100,7 @@ public class Profile extends AppCompatActivity implements ProfileInterface, View
         if (v.getId() == R.id.edit_profile) {
             Intent intent = new Intent(Profile.this, EditProfile.class);
             startActivity(intent);
+            Animatoo.animateSlideRight(this);
         }
     }
 }

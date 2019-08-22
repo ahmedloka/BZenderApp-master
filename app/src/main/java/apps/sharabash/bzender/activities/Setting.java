@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.util.Locale;
 import java.util.Objects;
 
@@ -45,6 +47,7 @@ public class Setting extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), Home.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
+            Animatoo.animateInAndOut(this);
         });
 
         sharedPreferences = getSharedPreferences("MySharedPreference", Context.MODE_PRIVATE);
@@ -64,6 +67,7 @@ public class Setting extends AppCompatActivity {
         change_password.setOnClickListener(v -> {
             Intent intent = new Intent(Setting.this, ChangePassword.class);
             startActivity(intent);
+            Animatoo.animateSlideRight(this);
 
         });
 
@@ -71,6 +75,7 @@ public class Setting extends AppCompatActivity {
         mTermsAndConditions.setOnClickListener(v -> {
             Intent intent = new Intent(Setting.this, TermsAndConditionActivity.class);
             startActivity(intent);
+            Animatoo.animateSlideRight(this);
         });
 
 
@@ -166,6 +171,8 @@ public class Setting extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Home.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
+
+        Animatoo.animateInAndOut(this);
 
     }
 

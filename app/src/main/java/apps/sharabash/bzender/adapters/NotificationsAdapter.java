@@ -79,8 +79,8 @@ public class NotificationsAdapter extends RecyclerView.Adapter<NotificationsAdap
 
 
         holder.itemView.setOnClickListener(v -> {
-            NavUtils.navigateUpFromSameTask((Activity) context);
-            ((Activity) context).overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+//            NavUtils.navigateUpFromSameTask((Activity) context);
+//            ((Activity) context).overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
         });
     }
 

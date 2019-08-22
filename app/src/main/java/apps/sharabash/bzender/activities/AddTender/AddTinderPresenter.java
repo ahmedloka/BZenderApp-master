@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import org.json.JSONObject;
 
 import java.util.List;
@@ -150,6 +152,7 @@ public class AddTinderPresenter {
         mContext.startActivity(intent);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         ((Activity) mContext).finish();
+        Animatoo.animateSlideRight(mContext);
 
     }
 

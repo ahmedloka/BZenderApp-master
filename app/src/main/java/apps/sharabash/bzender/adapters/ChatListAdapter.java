@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 
@@ -65,6 +66,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
             intent.putExtra(Constant.SENDER_ID, itemList.get(listPosition).getSenderId());
             intent.putExtra(Constant.RECEIVER_ID, itemList.get(listPosition).getReceiverId());
             context.startActivity(intent);
+            Animatoo.animateSlideRight(context);
             ((Activity) context).finish();
             ((Activity) context).overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
         });

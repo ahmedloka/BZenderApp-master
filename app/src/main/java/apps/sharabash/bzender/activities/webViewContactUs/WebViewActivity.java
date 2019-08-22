@@ -14,6 +14,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import apps.sharabash.bzender.R;
 import apps.sharabash.bzender.Utills.Constant;
 
@@ -74,5 +76,6 @@ public class WebViewActivity extends AppCompatActivity {
         super.onBackPressed();
 
         NavUtils.navigateUpFromSameTask(this);
+        Animatoo.animateSlideLeft(this);
     }
 }

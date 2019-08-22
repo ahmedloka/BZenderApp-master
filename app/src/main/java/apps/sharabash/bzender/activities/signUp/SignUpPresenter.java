@@ -18,6 +18,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import org.json.JSONObject;
 
 import java.util.List;
@@ -245,9 +247,9 @@ public class SignUpPresenter {
         mBtnOk.setOnClickListener(v -> {
             Intent intent = new Intent(context, VerificationActivity.class);
             context.startActivity(intent);
-            ((Activity) context).overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             ((Activity) context).finish();
+            Animatoo.animateSlideRight(context);
 
             dialog1.dismiss();
         });

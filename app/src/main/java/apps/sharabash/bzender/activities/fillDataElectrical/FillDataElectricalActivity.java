@@ -10,6 +10,7 @@ import android.support.v7.widget.AppCompatRadioButton;
 import android.util.Log;
 import android.view.View;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.wx.wheelview.adapter.ArrayWheelAdapter;
 import com.wx.wheelview.widget.WheelView;
 import com.ybs.countrypicker.CountryPicker;
@@ -48,6 +49,12 @@ public class FillDataElectricalActivity extends AppCompatActivity implements Vie
     private CountryPicker picker;
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateSlideLeft(this);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fill_data_electrical);
@@ -67,6 +74,7 @@ public class FillDataElectricalActivity extends AppCompatActivity implements Vie
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateSlideLeft(this);
         });
         String text;
         if (language.equals("ar")) {

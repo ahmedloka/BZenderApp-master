@@ -23,6 +23,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -86,6 +88,7 @@ public class ChatRoom extends AppCompatActivity implements RecyclerMessagesOneTo
     private ProgressBar progressBar;
     private SharedPreferences sharedPreferences;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -123,6 +126,7 @@ public class ChatRoom extends AppCompatActivity implements RecyclerMessagesOneTo
 
             Intent intent = new Intent(this, ChatListActivity.class);
             startActivity(intent);
+            Animatoo.animateSlideLeft(this);
             finish();
         });
 
@@ -252,10 +256,10 @@ public class ChatRoom extends AppCompatActivity implements RecyclerMessagesOneTo
 
         for (int i = 0; i < singleChatResponse.getChatList().size(); i++) {
             if (singleChatResponse.getChatList().get(i).getSenderId().equals(senderId)) {
-                messageList.add(new Message(Message.MSG_TYPE_RECEIVED , singleChatResponse.getChatList().get(i).getBody()));
-              //  receivedMsgs.add(singleChatResponse.getChatList().get(i).getBody());
-            }else {
-                messageList.add(new Message(Message.MSG_TYPE_SENT , singleChatResponse.getChatList().get(i).getBody()));
+                messageList.add(new Message(Message.MSG_TYPE_RECEIVED, singleChatResponse.getChatList().get(i).getBody()));
+                //  receivedMsgs.add(singleChatResponse.getChatList().get(i).getBody());
+            } else {
+                messageList.add(new Message(Message.MSG_TYPE_SENT, singleChatResponse.getChatList().get(i).getBody()));
             }
 
             if (!singleChatResponse.getChatList().get(i).getSenderId().equals(senderId)) {
@@ -282,6 +286,8 @@ public class ChatRoom extends AppCompatActivity implements RecyclerMessagesOneTo
 
 
         mRecyclerViewOneToOne.setAdapter(messagesOneToOneAdapter);
+        Constant.runLayoutAnimation(mRecyclerViewOneToOne);
+
 
         Log.d("count", "initViews: " + messagesOneToOneAdapter.getItemCount());
         if (messagesOneToOneAdapter.getItemCount() > 1)
@@ -300,5 +306,6 @@ public class ChatRoom extends AppCompatActivity implements RecyclerMessagesOneTo
         Intent intent = new Intent(this, ChatListActivity.class);
         startActivity(intent);
         finish();
+        Animatoo.animateSlideLeft(this);
     }
 }

@@ -11,11 +11,11 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.VectorDrawable;
 import android.os.Build;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.AppCompatImageView;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -23,8 +23,12 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.google.gson.Gson;
 import com.wang.avi.AVLoadingIndicatorView;
 
@@ -121,7 +125,7 @@ public class Constant {
     public static String TYPE;
     public static String NAME = "NAME";
     public static String SENDER_ID = "SENDER_ID";
-    public static String USER_ID_CHAT="USER_ID_CHAT";
+    public static String USER_ID_CHAT = "USER_ID_CHAT";
     public static String OLD_BASE64;
 
     public static String parseXML(String response) {
@@ -290,6 +294,7 @@ public class Constant {
                     intent.putExtra(Constant.BOOKING_ID, id);
                     intent.putExtra(Constant.TYPE, type);
                     context.startActivity(intent);
+                    Animatoo.animateZoom(context);
                     ((Activity) context).finish();
 
                     if (prettyDialog.isShowing()) {
@@ -373,12 +378,22 @@ public class Constant {
                 .setIcon(R.drawable.ic_success)
                 .addButton(context.getString(R.string.done), android.R.color.white, R.color.color_green, () -> {
                     NavUtils.navigateUpFromSameTask(((Activity) context));
+                    Animatoo.animateSlideLeft(context);
                     if (prettyDialog.isShowing())
                         prettyDialog.dismiss();
                 })
                 .show();
     }
 
+    public static void runLayoutAnimation(final RecyclerView recyclerView) {
+        final Context context = recyclerView.getContext();
+        final LayoutAnimationController controller =
+                AnimationUtils.loadLayoutAnimation(context, R.anim.layout_animation);
+
+        recyclerView.setLayoutAnimation(controller);
+        recyclerView.getAdapter().notifyDataSetChanged();
+        recyclerView.scheduleLayoutAnimation();
+    }
     public static void showSuccessDialogForVerfication(Context context, String message, String name) {
         PrettyDialog prettyDialog = new PrettyDialog(context);
         prettyDialog
@@ -387,15 +402,23 @@ public class Constant {
                 .addButton(context.getString(R.string.done), android.R.color.white, R.color.color_green, () -> {
                     Intent intent = new Intent(context, ChooseHowItWork.class);
                     intent.putExtra(Constant.Username, name);
-                    ((Activity) context).overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     context.startActivity(intent);
                     ((Activity) context).finish();
+                    Animatoo.animateSplit(context);
 
                     if (prettyDialog.isShowing())
                         prettyDialog.dismiss();
                 })
                 .show();
+    }
+
+    public static void hideKeyboardFrom(Context context, View view) {
+        view = ((AppCompatActivity) context).getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
     public static void getErrorDependingOnResponse(Context context, String response) {
@@ -503,11 +526,10 @@ public class Constant {
     }
 
 
-    public static Bitmap imageView2Bitmap(CircleImageView view){
-        Bitmap bitmap = ((BitmapDrawable)view.getDrawable()).getBitmap();
+    public static Bitmap imageView2Bitmap(CircleImageView view) {
+        Bitmap bitmap = ((BitmapDrawable) view.getDrawable()).getBitmap();
         return bitmap;
     }
-
 
 
 }

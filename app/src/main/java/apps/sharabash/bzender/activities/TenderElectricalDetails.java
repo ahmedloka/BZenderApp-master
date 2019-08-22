@@ -10,6 +10,8 @@ import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.LinearLayoutCompat;
 import android.util.Log;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.util.Locale;
 
 import apps.sharabash.bzender.Models.TendersDetails.TenderDetails;
@@ -52,6 +54,12 @@ public class TenderElectricalDetails extends AppCompatActivity implements Tender
 
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateSlideLeft(this);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tender_electrical_details);
@@ -87,6 +95,7 @@ public class TenderElectricalDetails extends AppCompatActivity implements Tender
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateSlideLeft(this);
         });
 
 

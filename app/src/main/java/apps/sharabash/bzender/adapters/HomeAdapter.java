@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 import java.util.List;
 
 import apps.sharabash.bzender.R;
@@ -70,7 +72,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
             }
             Intent intent = new Intent(context, AllTenderActivity.class);
             context.startActivity(intent);
-            ((Activity) context).overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+            Animatoo.animateFade(context);
         });
 
 

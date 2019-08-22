@@ -1,5 +1,6 @@
 package apps.sharabash.bzender.activities.myTender;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
+
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +21,7 @@ import apps.sharabash.bzender.Models.booking.MyTender;
 import apps.sharabash.bzender.Models.my_tenders.MyBookingBody;
 import apps.sharabash.bzender.Models.my_tenders.MyTendersBody;
 import apps.sharabash.bzender.R;
+import apps.sharabash.bzender.Utills.Constant;
 import apps.sharabash.bzender.Utills.MyTextViewBold;
 import apps.sharabash.bzender.activities.myBooking.MyTenderInterface;
 import apps.sharabash.bzender.activities.myBooking.MyTenderPresenter;
@@ -25,6 +31,12 @@ public class MyTendersActivity extends AppCompatActivity implements MyTenderInte
 
     private RecyclerView nearByRecyclerView;
     private MyTextViewBold mTxtEmpty;
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateInAndOut(this);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +51,7 @@ public class MyTendersActivity extends AppCompatActivity implements MyTenderInte
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateInAndOut(this);
         });
 
         MyTenderPresenter myTenderPresenter = new MyTenderPresenter(this, this);
@@ -96,5 +109,10 @@ public class MyTendersActivity extends AppCompatActivity implements MyTenderInte
 
         nearByRecyclerView.setAdapter(myTenderAdapter);
 
+        Constant.runLayoutAnimation(nearByRecyclerView);
+
+
     }
+
+
 }

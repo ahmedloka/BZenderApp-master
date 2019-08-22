@@ -17,6 +17,7 @@ import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.wx.wheelview.adapter.ArrayWheelAdapter;
 import com.wx.wheelview.widget.WheelView;
 
@@ -67,6 +68,12 @@ public class FillDataCarActivity extends AppCompatActivity implements CompoundBu
 
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Animatoo.animateSlideLeft(this);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fill_data_car);
@@ -88,6 +95,7 @@ public class FillDataCarActivity extends AppCompatActivity implements CompoundBu
         AppCompatImageView mImgBack = findViewById(R.id.imageNavigationIcon);
         mImgBack.setOnClickListener(v -> {
             NavUtils.navigateUpFromSameTask(this);
+            Animatoo.animateSlideLeft(this);
         });
 
         RadioGroup radioGroupManuAuto = findViewById(R.id.radio_group_manu_auto);

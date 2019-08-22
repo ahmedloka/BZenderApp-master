@@ -79,7 +79,7 @@
             android:gravity="center"
             app:textAllCaps="true"
             android:text="@string/empty_list"
-            android:visibility="visible"
+            android:visibility="gone"
             android:textColor="@color/pdlg_color_black"
             android:textSize="@dimen/_14sdp" />
 

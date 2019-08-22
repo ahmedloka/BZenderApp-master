@@ -3,6 +3,7 @@ package apps.sharabash.bzender.activities.Home;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,6 +18,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.widget.Button;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -34,7 +36,7 @@ import apps.sharabash.bzender.R;
 import apps.sharabash.bzender.Utills.Constant;
 import apps.sharabash.bzender.Utills.MyTextViewBold;
 import apps.sharabash.bzender.activities.AboutUs;
-import apps.sharabash.bzender.activities.AddTender.AddTinder;
+import apps.sharabash.bzender.activities.AddTender.AddTender;
 import apps.sharabash.bzender.activities.ChooseHowItWork;
 import apps.sharabash.bzender.activities.ContactUs;
 import apps.sharabash.bzender.activities.Setting;
@@ -78,22 +80,39 @@ public class Home extends AppCompatActivity implements homeInterface {
     private MyTextViewBold mTxtUserName;
     private String language;
     private CircleImageView mProfileIg;
+    private HomePresenter homePresenter;
+    private HomeAdapter homeAdapter;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
         setContentView(R.layout.activity_home);
 
+        initViews();
+    }
 
-        HomePresenter homePresenter = new HomePresenter(this, this);
-        homePresenter.getAllImages();
+    void mainCode() {
 
-
-        mSharedPreferences = getSharedPreferences("MySharedPreference", MODE_PRIVATE);
         language = mSharedPreferences.getString(Constant.language, Locale.getDefault().getDisplayLanguage());
-
-
         Constant.changeLang(this, Objects.requireNonNull(mSharedPreferences.getString(Constant.language, Locale.getDefault().getDisplayLanguage())));
+
+
+        if (language.equals("ar")) {
+            nameList.add("سيارات");
+            nameList.add("الكترونيات");
+        } else {
+            nameList.add("Cars");
+            nameList.add("Electronics");
+        }
+
+
+        nearByRecyclerView.setLayoutManager(new LinearLayoutManager(Home.this, LinearLayoutManager.VERTICAL, false));
+        nearByRecyclerView.setAdapter(homeAdapter);
+        Constant.runLayoutAnimation(nearByRecyclerView);
+
+
+        homePresenter.getAllImages();
 
         Token token = new Token();
         token.getToken(this);
@@ -101,34 +120,6 @@ public class Home extends AppCompatActivity implements homeInterface {
         homePresenter.sendPush(mSharedPreferences.getString(Constant.devicetoken, ""), Constant.ANDROID_OS);
 
         Log.d("APP_TOKEN", mSharedPreferences.getString(Constant.UserID, ""));
-
-        mPager = findViewById(R.id.pager);
-
-
-        drawer = findViewById(R.id.drawer_layout);
-        imageNavigationIcon = findViewById(R.id.imageNavigationIcon);
-        add_tinder = findViewById(R.id.add_tinder);
-        myBooking = findViewById(R.id.my_booking);
-        myTender = findViewById(R.id.my_tender);
-        notification = findViewById(R.id.notification);
-        about_us = findViewById(R.id.about_us);
-        payment = findViewById(R.id.payment);
-        call_us = findViewById(R.id.call_us);
-        settings = findViewById(R.id.settings);
-        chat = findViewById(R.id.chat);
-        profile = findViewById(R.id.profile);
-        mTxtUserName = findViewById(R.id.text_user_name_home);
-        how_it_work = findViewById(R.id.how_it_work);
-        log_out = findViewById(R.id.log_out);
-        nearByRecyclerView = findViewById(R.id.recycler);
-        mProfileIg = findViewById(R.id.profile_img);
-
-        homePresenter = new HomePresenter(this, this);
-
-
-        initViews();
-
-        homePresenter.getCategory();
 
 
         itemsNavigationsHandling();
@@ -144,16 +135,16 @@ public class Home extends AppCompatActivity implements homeInterface {
         });
 
         add_tinder.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), AddTinder.class);
+            Intent intent = new Intent(getApplicationContext(), AddTender.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+            Animatoo.animateSlideUp(this);
             //finish();
         });
 
         how_it_work.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), ChooseHowItWork.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+            Animatoo.animateFade(this);
             //finish();
         });
         log_out.setOnClickListener(v -> {
@@ -164,7 +155,7 @@ public class Home extends AppCompatActivity implements homeInterface {
             edit.putString(Constant.Useremail, "");
             edit.putString(Constant.PASSWORD, "");
             edit.putString(Constant.IMAGE_URL, "");
-            edit.putString(Constant.USER_ID_CHAT , "");
+            edit.putString(Constant.USER_ID_CHAT, "");
             edit.apply();
 
             Constant.NAME = "";
@@ -172,9 +163,10 @@ public class Home extends AppCompatActivity implements homeInterface {
 
             Intent intent = new Intent(getApplicationContext(), Login.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             finish();
+            Animatoo.animateSplit(this);
+
 
         });
         mTxtUserName.setText(mSharedPreferences.getString(Constant.Username, Constant.NAME));
@@ -201,39 +193,39 @@ public class Home extends AppCompatActivity implements homeInterface {
         about_us.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), AboutUs.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+            Animatoo.animateFade(this);
             //finish();
         });
         call_us.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), ContactUs.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+            Animatoo.animateFade(this);
             //finish();
         });
         profile.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), Profile.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+            Animatoo.animateFade(this);
             //finish();
         });
         settings.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), Setting.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+            Animatoo.animateFade(this);
             //finish();
         });
 
         chat.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), ChatListActivity.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+            Animatoo.animateSlideDown(this);
             //finish();
         });
 
         notification.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), Notifications.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+            Animatoo.animateFade(this);
             //finish();
         });
 
@@ -241,37 +233,71 @@ public class Home extends AppCompatActivity implements homeInterface {
         myBooking.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), MyBooking.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+            Animatoo.animateFade(this);
         });
 
         myTender.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), MyTendersActivity.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.pull_in_left, R.anim.pull_in_right);
+            Animatoo.animateFade(this);
         });
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
+
+        initViews();
+        mainCode();
+
+    }
+
+
     private void initViews() {
+
+        mSharedPreferences = getSharedPreferences("MySharedPreference", MODE_PRIVATE);
+
+        mPager = findViewById(R.id.pager);
+
+        homeAdapter = new HomeAdapter(Home.this, nameList);
+
+
+        drawer = findViewById(R.id.drawer_layout);
+        imageNavigationIcon = findViewById(R.id.imageNavigationIcon);
+        add_tinder = findViewById(R.id.add_tinder);
+        myBooking = findViewById(R.id.my_booking);
+        myTender = findViewById(R.id.my_tender);
+        notification = findViewById(R.id.notification);
+        about_us = findViewById(R.id.about_us);
+        payment = findViewById(R.id.payment);
+        call_us = findViewById(R.id.call_us);
+        settings = findViewById(R.id.settings);
+        chat = findViewById(R.id.chat);
+        profile = findViewById(R.id.profile);
+        mTxtUserName = findViewById(R.id.text_user_name_home);
+        how_it_work = findViewById(R.id.how_it_work);
+        log_out = findViewById(R.id.log_out);
+        nearByRecyclerView = findViewById(R.id.recycler);
+        mProfileIg = findViewById(R.id.profile_img);
+
+        homePresenter = new HomePresenter(this, this);
+
 
     }
 
     @Override
     public void handleCategoryList(List<getCategoryResponse> getCategoryResponse) {
-        if (getCategoryResponse != null) {
-
-            if (language.equals("ar")) {
-                nameList.add("سيارات");
-                nameList.add("الكترونيات");
-            } else {
-                nameList.add("Cars");
-                nameList.add("Electronics");
-            }
 
 
-            HomeAdapter homeAdapter = new HomeAdapter(Home.this, nameList);
-            nearByRecyclerView.setLayoutManager(new LinearLayoutManager(Home.this, LinearLayoutManager.VERTICAL, false));
-            nearByRecyclerView.setAdapter(homeAdapter);
-        }
     }
 
     @Override
@@ -294,7 +320,7 @@ public class Home extends AppCompatActivity implements homeInterface {
 
         final float density = getResources().getDisplayMetrics().density;
 
-//Set circle indicator radius
+        //Set circle indicator radius
         indicator.setRadius(5 * density);
 
         NUM_PAGES = imagesUrl.size();

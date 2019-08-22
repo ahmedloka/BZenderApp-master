@@ -49,6 +49,7 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".activities.myTender.MyTendersActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:parentActivityName=".activities.Home.Home" />
         <activity
             android:name=".activities.TermsAndConditionActivity"
@@ -132,10 +133,11 @@
             android:name=".activities.Tenders.AllTenderActivity"
             android:parentActivityName=".activities.Home.Home" />
         <activity
-            android:name=".activities.AddTender.AddTinder"
+            android:name=".activities.AddTender.AddTender"
             android:parentActivityName=".activities.Home.Home" />
         <activity
             android:name=".activities.verfication.VerificationActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
             android:parentActivityName=".activities.login.Login" />
         <activity
             android:name=".activities.forget_password.ForgetPassword"
@@ -146,6 +148,7 @@
             android:launchMode="singleTop" />
         <activity
             android:name=".activities.signUp.SignUp"
+            android:windowSoftInputMode="stateAlwaysHidden"
             android:exported="true" />
         <activity android:name=".activities.login.Login" />
         <activity android:name=".activities.Splash">
@@ -175,11 +178,11 @@
             </intent-filter>
         </service>
 
-        <service android:name=".services.SignalRService"
+        <service
+            android:name=".services.SignalRService"
             android:enabled="true"
             android:exported="true"
-            tools:ignore="ExportedService">
-        </service>
+            tools:ignore="ExportedService"></service>
 
         <receiver android:name=".Utills.NetworkChangeReceiver">
             <intent-filter>
